@@ -12,9 +12,6 @@ find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 # Add source directory
 add_subdirectory(src)
 
-# Add data directory
-add_subdirectory(data)
-
 # Link Qt6 libraries
 set(QT_LIBS Qt6::Core Qt6::Gui Qt6::Widgets)
 
@@ -22,4 +19,4 @@ set(QT_LIBS Qt6::Core Qt6::Gui Qt6::Widgets)
 add_executable(mood-journal main.cpp)
 
 # Link libraries to the executable
-target_link_libraries(mood-journal PRIVATE ${QT_LIBS})
+target_link_libraries(mood-journal PRIVATE ${QT_LIBS} src_lib)
